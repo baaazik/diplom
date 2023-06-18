@@ -19,4 +19,5 @@
     ],
     "editor.wordWrap": "on",
     "latex-workshop.latex.outDir": "%DIR%/build",
+    "latex-workshop.synctex.afterBuild.enabled": true,
 }
