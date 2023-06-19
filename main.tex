@@ -2,7 +2,7 @@
 \input{style.tex}
 \begin{document}
 
-\input{01-title.tex}
+\includepdf[pages=-]{title/title.pdf}
 \input{02-abstract.tex}
 \tableofcontents
 \input{03-intro.tex}
@@ -11,6 +11,8 @@
 \input{06-chapter3.tex}
 \input{07-chapter4.tex}
 \input{08-conclusion.tex}
+\newpage
+\renewcommand{\thepage}{} % Убрать номера страниц
 \printbibliography[title=СПИСОК ИСПОЛЬЗОВАННЫХ ИСТОЧНИКОВ]
 
 \end{document}

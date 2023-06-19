@@ -23,7 +23,9 @@
 \usepackage{lastpage}                              % Получить количество страниц
 \usepackage[figure,table]{totalcount}              % Получить количество рисунков и таблиц
 \usepackage{svg}                                   % Использование SVG в рисунках
+\usepackage{pdfpages}
 \usepackage{listings}
+\usepackage{fancyhdr}
 
 % Библиография
 \usepackage[
@@ -52,6 +54,30 @@
 % Для tabularx:
 \newcolumntype{Y}{>{\centering\arraybackslash}X} % Растянутый столбец (как X) с выравниванием по центру
 \newcolumntype{P}{>{\raggedleft\arraybackslash}X}% Растянутый столбец (как X) с выравниванием по справа
+
+% НАСТРОЙКИ НУМЕРАЦИИ СТРАНИЦ
+% Нумерация страницу снизу справа
+
+% Задаем наш стиль
+\fancypagestyle{gost}{
+	% Очистка текущих колонтитулов
+	\fancyhf{}
+	% Установить колонтитул страницы
+	\fancyfoot[R]{\thepage}
+	% Удаление линии разделителя колонтитулов
+	\renewcommand{\headrulewidth}{0pt}
+	% Отступ между верхним колонтитулом и текстом
+	\addtolength{\headsep}{-0.5cm}
+	% Отступ между нижним колонтитулом и текстом
+	\addtolength{\footskip}{-0.1cm}
+}
+
+% \chapter переключает первую страницу в стиль "plain", поэтому наш стиль не
+% применяется
+\fancypagestyle{plain}[gost]{}
+
+\pagestyle{gost}
+
 
 % ----------------------------- НАСТРОЙКИ ЗАГЛАВИЙ -----------------------------
 %% Отступ 1.5 слева (как у красной строки)t
