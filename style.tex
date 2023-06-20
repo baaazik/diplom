@@ -28,13 +28,14 @@
 \usepackage{fancyhdr}
 
 % Библиография
-\usepackage[
-    backend=biber,
-    sorting=none,                                  % Сортировка в порядке цитирования
-	style=gost-numeric,
-	language=auto,                                 % Автовыбор стиля, напр. писать [et al] вместо [и др]
-	autolang=other                                 % для англоязычных публикаций (langid={english})
-] {biblatex}
+% \usepackage[
+%     backend=biber,
+%     sorting=none,                                  % Сортировка в порядке цитирования
+% 	style=gost-numeric,
+% 	language=autobib,                              % Автовыбор стиля, напр. писать [et al] вместо [и др]
+% 	autolang=other                                 % для англоязычных публикаций (langid={english})
+% ] {biblatex}
+\input{biblatex.tex}
 
 \linespread{1.3}                                   % Полуторный интервал
 
