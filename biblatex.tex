@@ -142,3 +142,21 @@ isbn=false,% Показывать или нет ISBN, ISSN, ISRN
         }
     }
 }
+
+% Кодунство со StackOverflow для того, чтобы текст не выравнивался под цифрами
+% https://tex.stackexchange.com/questions/598595/no-indentation-in-non-second-lines-of-bibliography-list
+\setlength{\biblabelsep}{\labelsep}
+\defbibenvironment{bibliography}
+  {\list
+     {\printtext[labelnumberwidth]{%
+        \printfield{labelprefix}%
+        \printfield{labelnumber}}}
+     {\setlength{\labelwidth}{-\labelnumberwidth}%
+      \setlength{\labelsep}{\biblabelsep}%
+      \setlength{\leftmargin}{0pt}%
+      \setlength{\itemindent}{\bibhang}%
+      \setlength{\itemsep}{\bibitemsep}%
+      \setlength{\parsep}{\bibparsep}}%
+      \renewcommand*{\makelabel}[1]{\hss##1}}
+  {\endlist}
+  {\item}

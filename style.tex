@@ -26,6 +26,7 @@
 \usepackage{pdfpages}
 \usepackage{listings}
 \usepackage{fancyhdr}
+\usepackage{tempora}
 
 % Библиография
 % \usepackage[
@@ -37,14 +38,20 @@
 % ] {biblatex}
 \input{biblatex.tex}
 
-\linespread{1.3}                                   % Полуторный интервал
+\linespread{1.5}                                   % Полуторный интервал
 
 % Настройка полей
-\usepackage{geometry}
-\geometry{left=3cm}
-\geometry{right=1cm}
-\geometry{top=1.5cm}
-\geometry{bottom=2cm}
+% \usepackage{geometry}
+% \geometry{left=3cm}
+% \geometry{right=1cm}
+% \geometry{top=1.5cm}
+% \geometry{bottom=2cm}
+\usepackage[
+	left=3cm,
+	right=1cm,
+    top=2cm,
+	bottom=2cm,
+	bindingoffset=0cm]{geometry}
 
 
 \sloppy                                           % Избегать залезания строк на поля (надо?)
